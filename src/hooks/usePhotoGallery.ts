@@ -73,7 +73,7 @@ export function usePhotoGallery() {
         directory: Directory.Data,
       });
     
-      if (!isPlatform('hybrid')) {
+      if (isPlatform('hybrid')) {
         // Display the new image by rewriting the 'file://' path to HTTP
         // Details: https://ionicframework.com/docs/building/webview#file-protocol
         return {
